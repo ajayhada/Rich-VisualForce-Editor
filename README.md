@@ -18,7 +18,7 @@
   * Copy VisualForce editor plugin jar to eclipse/plugin/ folder and restart your eclipse.
 
 
-## How to use ## 
+## How to use ##
   * plugin will automatically attach with .page (visualforce) pages and if not then open visualforce page with this editor.
   * Plugin will add a new Visualforce page editor option to your editor's list.
   * Open your apex visualforce file with VisualForce page editor
