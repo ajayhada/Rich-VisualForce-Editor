@@ -25,7 +25,7 @@
   * If you are creating a new visualforce file then please add at least one tag as top level parent tag.
 
 ## example ##
-code><pre>
+<code><pre>
 &lt;apex:page&gt;
 &lt;[press ctrl+space] **
 &lt;/apex:page&gt;
