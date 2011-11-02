@@ -17,7 +17,6 @@
 
   * Copy VisualForce editor plugin jar to eclipse/plugin/ folder and restart your eclipse.
 
-
 ## How to use ##
   * plugin will automatically attach with .page (visualforce) pages and if not then open visualforce page with this editor.
   * Plugin will add a new Visualforce page editor option to your editor's list.
@@ -25,8 +24,8 @@
   * If you are creating a new visualforce file then please add at least one tag as top level parent tag.
 
 ## example ##
-<code><pre>
+<code>
 &lt;apex:page&gt;
 &lt;[press ctrl+space] **
 &lt;/apex:page&gt;
-</pre></code>
+</code>
