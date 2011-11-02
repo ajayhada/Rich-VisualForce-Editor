@@ -12,7 +12,7 @@
   * Used attributes will be removed from the suggestion box.
   * Suggestion box will also show some mark to show that tag is related to APEX, or HTML4, or HTML5
   * Proper Tag, Attribute, Text, Comment color scheme
-  * Context sencetive help within IDE on pressing a hot key for visualforce tags.  
+  * Context sensitive help within IDE on pressing a hot key for visualforce tags.  
 
 ## How to install : ##
 
