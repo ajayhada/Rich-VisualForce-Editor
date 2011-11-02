@@ -12,7 +12,9 @@
   * Used attributes will be removed from the suggestion box.
   * Suggestion box will also show some mark to show that tag is related to APEX, or HTML4, or HTML5
   * Proper Tag, Attribute, Text, Comment color scheme
-  * Context sensitive help within IDE on pressing a hot key for visualforce tags.  
+  * Context sensitive help within IDE on pressing a hot key for visualforce tags. 
+  * Support for “plugin update site” for all known pros.
+  * Support for dynamic update of tags and attributes, as per new Salesforce releases.
 
 ## How to install : ##
 
