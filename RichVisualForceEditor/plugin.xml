@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="com.vf.rich.editor.RichVisualForceEditor"
+            contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+            extensions="page"
+            icon="icons/sample.gif"
+            id="com.vf.rich.editor.RichVisualForceEditor"
+            name="Rich VisualForce Editor">
+      </editor>
+   </extension>
+
+
+</plugin>

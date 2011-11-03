@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: RichVisualForceEditor
+Bundle-SymbolicName: RichVisualForceEditor;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.vf.rich.editor.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.jface.text,
+ org.eclipse.ui.editors;bundle-version="3.6.1"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
