@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/RichVisualForceEditorFeature_1.0.0.201111031623.jar" id="RichVisualForceEditorFeature" version="1.0.0.201111031623"/>
+</site>
