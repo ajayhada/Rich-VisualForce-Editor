@@ -35,9 +35,9 @@ public class Activator extends AbstractUIPlugin {
 	public void start(BundleContext context) throws Exception {
 		super.start(context);
 		plugin = this;
-		registry.put(ICON_HTML,ImageDescriptor.createFromURL(getBundle().getEntry("/icons/html.png")));
-		registry.put(ICON_TAG,ImageDescriptor.createFromURL(getBundle().getEntry("/icons/tag.gif")));
-		registry.put(ICON_ATTR,ImageDescriptor.createFromURL(getBundle().getEntry("/icons/attribute.gif")));
+		registry.put(ICON_HTML,ImageDescriptor.createFromURL(getBundle().getEntry("icons/html.png")));
+		registry.put(ICON_TAG,ImageDescriptor.createFromURL(getBundle().getEntry("icons/tag.gif")));
+		registry.put(ICON_ATTR,ImageDescriptor.createFromURL(getBundle().getEntry("icons/attribute.gif")));
 	}
 
 	/*
@@ -67,5 +67,10 @@ public class Activator extends AbstractUIPlugin {
 	 */
 	public static ImageDescriptor getImageDescriptor(String path) {
 		return imageDescriptorFromPlugin(PLUGIN_ID, path);
+	}
+	
+	@Override
+	public ImageRegistry getImageRegistry() {
+		return registry;
 	}
 }

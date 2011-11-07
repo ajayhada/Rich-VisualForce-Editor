@@ -26,7 +26,9 @@ public class ForceTagAssistProcessor implements IContentAssistProcessor {
 	private Image tagImage;
 	private Image attributeImage;
 
+
 	public ForceTagAssistProcessor() {
+		
 		tagImage = Activator.getDefault().getImageRegistry()
 				.get(Activator.ICON_TAG);
 		attributeImage = Activator.getDefault().getImageRegistry()
@@ -38,8 +40,8 @@ public class ForceTagAssistProcessor implements IContentAssistProcessor {
 
 		String text = viewer.getDocument().get().substring(0, documentOffset);
 		String[] dim = getLastWord(text);
-		String word = dim[0];//.toLowerCase();
-		String prev = dim[1];//.toLowerCase();
+		String word = dim[0];
+		String prev = dim[1];
 		String last = dim[2];
 
 		List list = new ArrayList();
@@ -55,7 +57,7 @@ public class ForceTagAssistProcessor implements IContentAssistProcessor {
 					String assistKeyword = null;
 					int position = 0;
 					if (tagInfo.hasBody()) {
-						assistKeyword = tagName + "></" + tagName + "><!-- test1 -->";
+						assistKeyword = tagName + "></" + tagName + ">";
 						// assistKeyword = tagName + ">";
 						position = 1;
 					} else {

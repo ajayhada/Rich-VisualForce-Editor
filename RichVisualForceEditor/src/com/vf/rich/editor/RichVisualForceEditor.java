@@ -1,5 +1,6 @@
 package com.vf.rich.editor;
 
+
 import org.eclipse.ui.editors.text.TextEditor;
 
 public class RichVisualForceEditor extends TextEditor {
