@@ -44,9 +44,7 @@ public class XMLConfiguration extends SourceViewerConfiguration {
 		if (scanner == null) {
 			scanner = new XMLScanner(colorManager);
 			scanner.setDefaultReturnToken(
-				new Token(
-					new TextAttribute(
-						colorManager.getColor(IXMLColorConstants.DEFAULT))));
+				new Token(new TextAttribute(colorManager.getColor(IXMLColorConstants.DEFAULT))));
 		}
 		return scanner;
 	}
@@ -60,7 +58,7 @@ public class XMLConfiguration extends SourceViewerConfiguration {
 		}
 		return tagScanner;
 	}
-
+	
 	public IPresentationReconciler getPresentationReconciler(ISourceViewer sourceViewer) {
 		PresentationReconciler reconciler = new PresentationReconciler();
 

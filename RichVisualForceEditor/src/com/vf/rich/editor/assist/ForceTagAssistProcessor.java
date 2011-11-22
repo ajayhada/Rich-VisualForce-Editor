@@ -17,7 +17,7 @@ import org.eclipse.swt.graphics.Image;
 import com.vf.rich.editor.Activator;
 /**
  * 
- * @author eclipse and AjayHada
+ * @author eclipse
  *
  */
 public class ForceTagAssistProcessor implements IContentAssistProcessor {
@@ -45,9 +45,7 @@ public class ForceTagAssistProcessor implements IContentAssistProcessor {
 		String last = dim[2];
 
 		List list = new ArrayList();
-		List tagList = TagDefinition.getTagInfoAsList();
-
-		//System.out.println("[0]" + word + "[1]" + prev + "[2]" + last);
+		List tagList = TagDefinations.getAllTagsDefinationList();
 
 		if (word.startsWith("<") && !word.equals("</")) {
 			for (int i = 0; i < tagList.size(); i++) {
@@ -58,12 +56,13 @@ public class ForceTagAssistProcessor implements IContentAssistProcessor {
 					int position = 0;
 					if (tagInfo.hasBody()) {
 						assistKeyword = tagName + "></" + tagName + ">";
-						// assistKeyword = tagName + ">";
 						position = 1;
 					} else {
 						assistKeyword = tagName + "/>";
 						position = 2;
 					}
+					
+					
 					list.add(new CompletionProposal(assistKeyword,
 							documentOffset - word.length() + 1,
 							word.length() - 1, tagName.length() + position,
@@ -108,8 +107,7 @@ public class ForceTagAssistProcessor implements IContentAssistProcessor {
 					assistKeyword, null, null));
 		}
 
-		CompletionProposal[] prop = (CompletionProposal[]) list
-				.toArray(new CompletionProposal[list.size()]);
+		CompletionProposal[] prop = (CompletionProposal[]) list.toArray(new CompletionProposal[list.size()]);
 		return prop;
 	}
 
@@ -173,6 +171,7 @@ public class ForceTagAssistProcessor implements IContentAssistProcessor {
 
 	public IContextInformation[] computeContextInformation(ITextViewer viewer,
 			int documentOffset) {
+		
 		ContextInformation[] info = new ContextInformation[0];
 		return info;
 	}

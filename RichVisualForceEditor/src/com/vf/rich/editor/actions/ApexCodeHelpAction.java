@@ -27,12 +27,12 @@ import org.eclipse.jface.dialogs.MessageDialog;
  * delegated to it.
  * @see IWorkbenchWindowActionDelegate
  */
-public class RRRRRRAction implements IWorkbenchWindowActionDelegate {
+public class ApexCodeHelpAction implements IWorkbenchWindowActionDelegate {
 	private IWorkbenchWindow window;
 	/**
 	 * The constructor.
 	 */
-	public RRRRRRAction() {
+	public ApexCodeHelpAction() {
 	}
 
 	/**
@@ -51,7 +51,7 @@ public class RRRRRRAction implements IWorkbenchWindowActionDelegate {
 				
 				
 				browser = support.createBrowser(""+System.currentTimeMillis());
-				browser.openURL(new URL("http://www.salesforce.com/us/developer/docs/pages/index.htm"));
+				browser.openURL(new URL("http://www.salesforce.com/us/developer/docs/apexcode/index.htm"));
 			} catch (PartInitException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

@@ -1,6 +1,7 @@
 package com.vf.rich.editor.assist;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 /**
  * 
  * @author eclipse and AjayHada
@@ -17,6 +18,14 @@ public class Tag {
 		this.hasBody = hasBody;
 	}
 	
+	public Tag(String tagName,boolean hasBody,String[] attributeList){
+		this.name = tagName;
+		this.hasBody = hasBody;
+		for (String attributeName : attributeList) {
+			attributes.add(new Attribute(attributeName));
+		}
+	}
+	
 	public String getTagName(){
 		return this.name;
 	}
@@ -25,8 +34,8 @@ public class Tag {
 		return this.hasBody;
 	}
 	
-	public void addAttribute(Attribute attribute){
-		this.attributes.add(attribute);
+	public void addAttribute(String attribute){
+		this.attributes.add(new Attribute(attribute));
 	}
 	
 	public Attribute[] getAttributes(){
