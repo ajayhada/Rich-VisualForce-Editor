@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/RichVisualForceEditorFeature_1.0.0.201111031623.jar" id="RichVisualForceEditorFeature" version="1.0.0.201111031623"/>
+   <description name="Rich VisualForce Editor Update Site" url="http://dl.dropbox.com/u/12269376/RichVisualForceEditorUpdateSite">
+      Rich VisualForce Editor Update Site
+   </description>
+   <feature url="features/RichVisualForceEditorFeature_1.0.4.jar" id="RichVisualForceEditorFeature" version="1.0.4">
+      <category name="RichVisualForceEditorPlugin"/>
+   </feature>
+   <category-def name="RichVisualForceEditorPlugin" label="RichVisualForceEditorPlugin"/>
 </site>

@@ -37,7 +37,7 @@ public class ForceTagAssistProcessor implements IContentAssistProcessor {
 
 	public ICompletionProposal[] computeCompletionProposals(ITextViewer viewer,
 			int documentOffset) {
-
+		//System.out.println("computeCompletionProposals -- documentOffset - " + documentOffset);
 		String text = viewer.getDocument().get().substring(0, documentOffset);
 		String[] dim = getLastWord(text);
 		String word = dim[0];
@@ -112,7 +112,7 @@ public class ForceTagAssistProcessor implements IContentAssistProcessor {
 	}
 
 	private String[] getLastWord(String text) {
-
+		//System.out.println("getLastWord(Text) -" + text);
 		StringBuffer sb = new StringBuffer();
 		Stack stack = new Stack();
 		String word = "";
@@ -123,15 +123,14 @@ public class ForceTagAssistProcessor implements IContentAssistProcessor {
 			char c = text.charAt(i);
 			if (isDelimiter(c)) {
 				str = sb.toString();
-				if (str.startsWith("<") && !str.startsWith("</")
-						&& !str.startsWith("<!")) {
+				if (str.startsWith("<") && !str.startsWith("</") && !str.startsWith("<!")) {
 					prevTag = str.substring(1);
 					if (!str.endsWith("/")) {
 						stack.push(prevTag);
 					}
 				} else if (str.startsWith("</") && stack.size() != 0) {
 					stack.pop();
-				} else if (str.endsWith("/")) {
+				} else if (str.endsWith("/") && stack.size() != 0) {
 					stack.pop();
 				}
 				sb.setLength(0);
