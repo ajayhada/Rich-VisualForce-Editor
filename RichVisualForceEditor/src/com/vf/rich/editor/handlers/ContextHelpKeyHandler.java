@@ -2,7 +2,6 @@ package com.vf.rich.editor.handlers;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.HashSet;
 import java.util.List;
 
 import org.eclipse.core.commands.AbstractHandler;

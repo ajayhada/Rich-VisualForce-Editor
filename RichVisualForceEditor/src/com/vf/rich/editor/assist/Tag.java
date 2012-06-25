@@ -1,7 +1,6 @@
 package com.vf.rich.editor.assist;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 /**
  * 
  * @author eclipse and AjayHada
