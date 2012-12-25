@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            name="Apex Editor"
+            extensions="page,component"
+            icon="icons/editicon.png"
+            contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+            class="com.vf.apex.editor.RichVisualForceEditor"
+            id="com.vf.apex.editor.RichVisualForceEditor">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.preferencePages">
+      <page
+            class="com.vf.apex.editor.preferences.RichVisualForcePreferencePage"
+            id="com.vf.apex.editor.preferences.RichVisualForcePreferencePage"
+            name="Rich Visualforce Editor">
+      </page>
+   </extension>
+   
+   <extension point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="com.vf.apex.editor.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+   
+   <extension point="org.eclipse.ui.commands">
+      <category 
+            id="com.vf.apex.editor.commands.RichVisualForceCategory"
+            name="RichVisualForce Category">
+      </category>
+      
+      <command
+            categoryId="com.vf.apex.editor.commands.RichVisualForceCategory"
+            id="com.vf.apex.editor.commands.ContextHelpCommand"
+            name="ContextHelp Command">
+    </command>	
+     <command 
+            categoryId="com.vf.apex.editor.commands.RichVisualForceCategory"
+            id="com.vf.apex.editor.commands.CommitToGit"
+            name="CommitToGit Command">
+      </command> 
+      
+       <command 
+            categoryId="com.vf.apex.editor.commands.RichVisualForceCategory"
+            id="com.vf.apex.editor.commands.PushToGit"
+            name="PushToGit Command">
+      </command> 
+      
+   </extension>
+   
+   <extension point="org.eclipse.ui.handlers">
+      <handler
+            class="com.vf.apex.editor.handlers.ContextHelpKeyHandler"
+            commandId="com.vf.apex.editor.commands.ContextHelpCommand">
+      </handler>
+     
+   </extension>
+   
+   <extension point="org.eclipse.ui.bindings" >
+      <key
+            commandId="com.vf.apex.editor.commands.ContextHelpCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="ALT+1">
+      </key>
+      
+		  <key
+	      sequence="CTRL+SHIFT+C" 
+	      contextId="org.eclipse.ui.contexts.window"
+	      commandId="com.vf.apex.editor.commands.CommitToGit"
+	      schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+		</key>
+		
+		 <key
+	      sequence="CTRL+SHIFT+P" 
+	      contextId="org.eclipse.ui.contexts.window"
+	      commandId="com.vf.apex.editor.commands.PushToGit"
+	      schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+		</key>
+		
+ 
+   </extension>
+   
+   <extension point="org.eclipse.ui.actionSets">
+      <actionSet label="Rich Visualforce Editor" visible="true"  id="com.vf.apex.editor.actionset"> 
+         <action label="DeveloperDocsHelpAction" 
+               icon="icons/apexhelp.png"
+               class="com.vf.apex.editor.actions.DeveloperDocsHelpAction"
+               tooltip="Open Visualforce Developer's Guide"
+               toolbarPath="RichVisualforceGroup"
+               id="com.vf.apex.editor.actions.DeveloperDocsHelpAction">
+         </action>
+          <action label="ApexCodeHelpAction" 
+               icon="icons/developerhelp.png"
+               class="com.vf.apex.editor.actions.ApexCodeHelpAction"
+               tooltip="Open Apex Code Developer's Guide"
+               toolbarPath="RichVisualforceGroup"
+               id="com.vf.apex.editor.actions.ApexCodeHelpAction">
+         </action>
+         
+         <action  definitionId="com.vf.apex.editor.commands.CommitToGit"
+         		class="com.vf.apex.editor.actions.GitCommitAction" 
+                icon="icons/gitcommit.png"
+                id="com.vf.apex.editor.actions.GitCommitAction"
+                label="GitCommitAction"
+                toolbarPath="RichVisualforceGroup"
+                tooltip="Commit changes to local repository">
+          </action> 
+          
+          <action  definitionId="com.vf.apex.editor.commands.PushToGit"
+         		class="com.vf.apex.editor.actions.GitPushAction" 
+                icon="icons/gitpush.png"
+                id="com.vf.apex.editor.actions.GitPushAction"
+                label="GitPushAction"
+                toolbarPath="RichVisualforceGroup"
+                tooltip="Push changes to remote repository">
+          </action> 
+          
+          
+      </actionSet>
+	</extension>
+	
+</plugin>
