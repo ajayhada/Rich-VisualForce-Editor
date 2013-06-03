@@ -1,5 +1,8 @@
 # Visual Force Editor Plugin #
 
+### DOWNLOAD LINK
+you can download this plugin from following locations.
+http://goo.gl/psPsC
 
 ## Features ##
   * Html4 tag and attribute assistance 
